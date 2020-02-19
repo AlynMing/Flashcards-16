@@ -3,13 +3,10 @@
 ## Lab 1
 
 ### App Description
-`Simple flashcard app that student can use to learn any facts.
+Simple flashcard app that student can use to learn any facts.
 
 ### App Walk-though
-
 <img src="https://github.com/jess-izuu/Flashcards/blob/master/walkthrough.gif" width=200><br>
-
-`TODO://` In the User stories section below, add an `x` between the `-[ ]` like this `- [x]` for any user story you complete. (☝️ Remove this paragraph after after checking off user stories)
 
 ## Required
 - [x] Create New Project in Xcode
