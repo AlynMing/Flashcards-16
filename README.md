@@ -6,7 +6,6 @@
 `Simple flashcard app that student can use to learn any facts.
 
 ### App Walk-though
-`TODO://` Add the URL to your animated app walk-though `gif` in the image tag below. Make sure the gif actually renders and animates when viewing this README. (☝️ Remove this paragraph after after adding gif)
 
 <img src="https://github.com/jess-izuu/Flashcards/blob/master/walkthrough.gif" width=200><br>
 
