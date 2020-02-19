@@ -15,7 +15,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        frontLabel.isHidden = false
+        backLabel.isHidden = true
         // Do any additional setup after loading the view.
     }
 
