@@ -12,11 +12,15 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var frontLabel: UILabel!
     @IBOutlet weak var backLabel: UILabel!
+    @IBOutlet weak var card: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         frontLabel.isHidden = false
         backLabel.isHidden = true
+        
+        card.layer.cornerRadius = 20.0
+        card.clipsToBounds = true
         // Do any additional setup after loading the view.
     }
 
