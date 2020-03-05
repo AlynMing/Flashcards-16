@@ -43,11 +43,11 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKY-BJ-ugi">
-                                <rect key="frame" x="184" y="793" width="46" height="30"/>
+                                <rect key="frame" x="192" y="793" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="+"/>
                                 <connections>
-                                    <segue destination="cZl-Fz-U2i" kind="presentation" id="NYl-Yf-3yJ"/>
+                                    <segue destination="OAX-xl-bhe" kind="presentation" id="NYl-Yf-3yJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -93,10 +93,31 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="7vJ-Hg-uMV"/>
                     </view>
+                    <navigationItem key="navigationItem" id="MgP-Ef-C8d">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Dlk-Mm-TzC"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JyR-nb-P8c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="830" y="118"/>
+            <point key="canvasLocation" x="1739.1304347826087" y="117.85714285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="v9Q-lX-rlO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OAX-xl-bhe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="p59-Lh-UIL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cZl-Fz-U2i" kind="relationship" relationship="rootViewController" id="nqO-o4-AvZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LtW-pY-P3S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828.98550724637687" y="117.85714285714285"/>
         </scene>
     </scenes>
 </document>
