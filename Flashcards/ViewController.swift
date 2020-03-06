@@ -35,5 +35,17 @@ class ViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue:UIStoryboardSegue, sender: Any?) {
+        let navigationController = segue.destination as! UINavigationController
+        
+        let creationController = navigationController.topViewController as! CreationViewController
+        
+        creationController.flashcardsController = self 
+    }
+    
+    func updateFlashcard(question: String, answer: String) {
+        //updateFlashcard(question: "Team Edward or Team Jacob?", answer:"I'll tell you after class")
+    }
+    
 }
 

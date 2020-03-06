@@ -99,7 +99,16 @@
                                 <action selector="didTapOnCancel:" destination="cZl-Fz-U2i" id="ERF-YI-BMO"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="RRz-4R-gck">
+                            <connections>
+                                <action selector="didTapOnDone:" destination="cZl-Fz-U2i" id="3Py-rR-2Hr"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="answerTextField" destination="uEf-UL-odv" id="Lms-mi-7ws"/>
+                        <outlet property="questionTextField" destination="VCr-Xr-AYy" id="dAI-Lb-PzJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JyR-nb-P8c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
