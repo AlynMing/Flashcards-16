@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var backLabel: UILabel!
     @IBOutlet weak var card: UIView!
     
+    var flashcards = [Flashcard]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         frontLabel.isHidden = false
@@ -51,7 +53,10 @@ class ViewController: UIViewController {
     func updateFlashcard(question: String, answer: String) {
         let flashcard = Flashcard(question: question, answer: answer)
         frontLabel.text = flashcard.question
-        backLabel.text = flashcard.answer 
+        backLabel.text = flashcard.answer
+        
+        //Adding flashcard in the flashcards array
+        flashcards.append(flashcard)
     }
     
 }
