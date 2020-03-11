@@ -8,6 +8,11 @@
 
 import UIKit
 
+struct Flashcard {
+    var question: String
+    var answer: String
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var frontLabel: UILabel!
@@ -44,7 +49,9 @@ class ViewController: UIViewController {
     }
     
     func updateFlashcard(question: String, answer: String) {
-        //updateFlashcard(question: "Team Edward or Team Jacob?", answer:"I'll tell you after class")
+        let flashcard = Flashcard(question: question, answer: answer)
+        frontLabel.text = flashcard.question
+        backLabel.text = flashcard.answer 
     }
     
 }
