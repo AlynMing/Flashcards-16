@@ -19,6 +19,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var backLabel: UILabel!
     @IBOutlet weak var card: UIView!
     
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var prevButton: UIButton!
+    
     var flashcards = [Flashcard]()
     
     override func viewDidLoad() {
@@ -57,6 +60,12 @@ class ViewController: UIViewController {
         
         //Adding flashcard in the flashcards array
         flashcards.append(flashcard)
+    }
+    
+    @IBAction func didTapOnNext(_ sender: Any) {
+    }
+    
+    @IBAction func didTapOnPrev(_ sender: Any) {
     }
     
 }

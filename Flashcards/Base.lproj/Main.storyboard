@@ -50,6 +50,22 @@
                                     <segue destination="OAX-xl-bhe" kind="presentation" id="NYl-Yf-3yJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBu-ti-xka">
+                                <rect key="frame" x="28" y="793" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Prev"/>
+                                <connections>
+                                    <action selector="didTapOnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qxk-Uc-0lM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Vn-px-4YT">
+                                <rect key="frame" x="355" y="793" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="didTapOnPrev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xts-20-8nP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -58,6 +74,8 @@
                         <outlet property="backLabel" destination="yPq-aa-AUi" id="2c8-Re-rov"/>
                         <outlet property="card" destination="X3J-DS-yhH" id="tmF-TA-E3g"/>
                         <outlet property="frontLabel" destination="Vr6-aM-4nw" id="65k-0C-0SC"/>
+                        <outlet property="nextButton" destination="PBu-ti-xka" id="MvR-TI-87U"/>
+                        <outlet property="prevButton" destination="0Vn-px-4YT" id="2TT-hN-4Vh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
