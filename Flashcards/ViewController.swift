@@ -81,6 +81,14 @@ class ViewController: UIViewController {
         } else {
             nextButton.isEnabled = true
         }
+        
+        //Disable prev button if at the end
+        if currentIndex == flashcards.count - 1 {
+            prevButton.isEnabled = false
+        } else {
+            prevButton.isEnabled = true
+        }
+        
     }
 }
 
