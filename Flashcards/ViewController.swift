@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     var flashcards = [Flashcard]()
     
     //Current flashcard index
+    var currentIndex = 0
     
     
     override func viewDidLoad() {
@@ -62,6 +63,9 @@ class ViewController: UIViewController {
         
         //Adding flashcard in the flashcards array
         flashcards.append(flashcard)
+        
+        //Update buttons
+        updateNextPrevButtons()
     }
     
     @IBAction func didTapOnNext(_ sender: Any) {
@@ -70,5 +74,13 @@ class ViewController: UIViewController {
     @IBAction func didTapOnPrev(_ sender: Any) {
     }
     
+    func updateNextPrevButtons() {
+        //Disable next button if at the end
+        if currentIndex == flashcards.count - 1 {
+            nextButton.isEnabled = false
+        } else {
+            nextButton.isEnabled = true
+        }
+    }
 }
 
