@@ -24,10 +24,12 @@ class ViewController: UIViewController {
     
     var flashcards = [Flashcard]()
     
+    //Current flashcard index
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        frontLabel.isHidden = false
-        backLabel.isHidden = true
+        updateFlashcard(question: "What's the capital of Brazil?", answer: "Brasilia")
         
         card.layer.cornerRadius = 20.0
         card.clipsToBounds = true
