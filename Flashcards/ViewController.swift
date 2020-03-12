@@ -58,17 +58,29 @@ class ViewController: UIViewController {
     
     func updateFlashcard(question: String, answer: String) {
         let flashcard = Flashcard(question: question, answer: answer)
-        frontLabel.text = flashcard.question
-        backLabel.text = flashcard.answer
+        //frontLabel.text = flashcard.question
+        //backLabel.text = flashcard.answer
         
         //Adding flashcard in the flashcards array
         flashcards.append(flashcard)
         
         //Update buttons
         updateNextPrevButtons()
+        
+        //Update labels
+        updateLabels()
     }
     
     @IBAction func didTapOnNext(_ sender: Any) {
+        
+        //Increase current index
+        currentIndex = currentIndex + 1
+        
+        //Update labels
+        updateLabels()
+        
+        //Update buttons
+        updateNextPrevButtons()
     }
     
     @IBAction func didTapOnPrev(_ sender: Any) {
@@ -88,7 +100,15 @@ class ViewController: UIViewController {
         } else {
             prevButton.isEnabled = true
         }
+    }
+    
+    func updateLabels() {
+        // Get current flashcard
+        let currentFlashcard = flashcards[currentIndex]
         
+        //Update labels
+        frontLabel.text = currentFlashcard.question
+        backLabel.text = currentFlashcard.answer
     }
 }
 
