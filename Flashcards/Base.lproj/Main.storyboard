@@ -74,8 +74,8 @@
                         <outlet property="backLabel" destination="yPq-aa-AUi" id="2c8-Re-rov"/>
                         <outlet property="card" destination="X3J-DS-yhH" id="tmF-TA-E3g"/>
                         <outlet property="frontLabel" destination="Vr6-aM-4nw" id="65k-0C-0SC"/>
-                        <outlet property="nextButton" destination="PBu-ti-xka" id="MvR-TI-87U"/>
-                        <outlet property="prevButton" destination="0Vn-px-4YT" id="2TT-hN-4Vh"/>
+                        <outlet property="nextButton" destination="0Vn-px-4YT" id="dcM-Xx-wvD"/>
+                        <outlet property="prevButton" destination="PBu-ti-xka" id="88g-AQ-IUS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

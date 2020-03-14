@@ -19,8 +19,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var backLabel: UILabel!
     @IBOutlet weak var card: UIView!
     
-    @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var prevButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     
     var flashcards = [Flashcard]()
     
@@ -106,18 +106,20 @@ class ViewController: UIViewController {
     
     func updateNextPrevButtons() {
         //Disable next button if at the end
-        if currentIndex == flashcards.count - 1 {
+
+        if flashcards.count - 1 == 0 {
+            prevButton.isEnabled = false
             nextButton.isEnabled = false
-        } else {
-            nextButton.isEnabled = true
         }
         
-        //Disable prev button if at the end
-        if currentIndex == flashcards.count + 1 {
+       else if currentIndex == flashcards.count - 1 {
+            nextButton.isEnabled = false
             prevButton.isEnabled = false
         } else {
-            prevButton.isEnabled = true
+            nextButton.isEnabled = true
+            prevButton.isEnabled = false
         }
+        
     }
     
     func updateLabels() {
