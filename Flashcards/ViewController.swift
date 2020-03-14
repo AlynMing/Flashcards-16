@@ -64,6 +64,14 @@ class ViewController: UIViewController {
         //Adding flashcard in the flashcards array
         flashcards.append(flashcard)
         
+        //Logging to console
+        print("Added new flashcard!")
+        
+        print("We now have \(flashcards.count) flashcards")
+        
+        currentIndex = flashcards.count - 1
+        print("Our current index is \(currentIndex)")
+        
         //Update buttons
         updateNextPrevButtons()
         
