@@ -92,6 +92,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTapOnPrev(_ sender: Any) {
+        if currentIndex > 0 {
+            currentIndex = currentIndex - 1
+        }
+        else {
+            currentIndex = 0
+        }
+
+        updateLabels()
+        updateNextPrevButtons()
+        
     }
     
     func updateNextPrevButtons() {
@@ -103,7 +113,7 @@ class ViewController: UIViewController {
         }
         
         //Disable prev button if at the end
-        if currentIndex == flashcards.count - 1 {
+        if currentIndex == flashcards.count + 1 {
             prevButton.isEnabled = false
         } else {
             prevButton.isEnabled = true
