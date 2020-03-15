@@ -105,20 +105,23 @@ class ViewController: UIViewController {
     }
     
     func updateNextPrevButtons() {
-        //Disable next button if at the end
-
-        if flashcards.count - 1 == 0 {
-            prevButton.isEnabled = false
+        //prevButton.isEnabled = true
+       //Disable next button if at the end
+       if currentIndex == flashcards.count - 1 {
             nextButton.isEnabled = false
+        }
+        else {
+            nextButton.isEnabled = true
         }
         
-       else if currentIndex == flashcards.count - 1 {
-            nextButton.isEnabled = false
-            prevButton.isEnabled = false
-        } else {
-            nextButton.isEnabled = true
+        //Disable prev button if at beginnning
+        if flashcards.count - 1 == 0 {
             prevButton.isEnabled = false
         }
+        else {
+            prevButton.isEnabled = true
+        }
+    
         
     }
     
