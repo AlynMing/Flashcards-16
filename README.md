@@ -9,6 +9,7 @@ User can add flashcards and click Prev or next to scroll through struct.
 ### App Walk-though
 
 <img src="https://github.com/jess-izuu/Flashcards/blob/master/walkthrough_buttons.gif" width=200><br>
+<img src="https://github.com/jess-izuu/Flashcards/blob/master/walkthrough_buttons2.gif" width=200><br>
 
 
 ## Required
