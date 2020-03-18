@@ -77,6 +77,9 @@ class ViewController: UIViewController {
         
         //Update labels
         updateLabels()
+        
+        //Save flashcards 
+        saveAllFlashcardsToDisk()
     }
     
     @IBAction func didTapOnNext(_ sender: Any) {
@@ -132,6 +135,14 @@ class ViewController: UIViewController {
         //Update labels
         frontLabel.text = currentFlashcard.question
         backLabel.text = currentFlashcard.answer
+    }
+    
+    func saveAllFlashcardsToDisk(){
+        let dictionaryArray = flashcards.map{ (card) -> [String:String] in return ["question": card.question, "answer": card.answer]
+        }
+        
+        UserDefaults.standard.set(dictionaryArray, forKey: "flashcards")
+        print("Flashcards saved to UserDefaults")
     }
 }
 
