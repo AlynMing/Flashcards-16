@@ -30,7 +30,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        readSavedFlashcards()
+        if flashcards.count == 0 {
         updateFlashcard(question: "What's the capital of Brazil?", answer: "Brasilia")
+        } else {
+            updateLabels()
+            updateNextPrevButtons()
+        }
         
         card.layer.cornerRadius = 20.0
         card.clipsToBounds = true
@@ -78,7 +85,7 @@ class ViewController: UIViewController {
         //Update labels
         updateLabels()
         
-        //Save flashcards 
+        //Save flashcards
         saveAllFlashcardsToDisk()
     }
     
@@ -143,6 +150,15 @@ class ViewController: UIViewController {
         
         UserDefaults.standard.set(dictionaryArray, forKey: "flashcards")
         print("Flashcards saved to UserDefaults")
+    }
+    
+    func readSavedFlashcards() {
+        if let dictionaryArray = UserDefaults.standard.array(forKey: "flashcards") as? [[String: String]] {
+            let savedCards = dictionaryArray.map { dictionary -> Flashcard in return Flashcard(question: dictionary["question"]!, answer: dictionary["answer"]!)
+                
+            }
+            flashcards.append(contentsOf: savedCards)
+        }
     }
 }
 
