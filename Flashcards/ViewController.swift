@@ -101,14 +101,12 @@ class ViewController: UIViewController {
         //Increase current index
         currentIndex = currentIndex + 1
         
-        //Update labels
-        updateLabels()
+        //Animate & Update Labels
+        animateCardOut()
         
         //Update buttons
         updateNextPrevButtons()
         
-        //Animate
-        animateCardOut()
     }
     
     @IBAction func didTapOnPrev(_ sender: Any) {
@@ -175,11 +173,14 @@ class ViewController: UIViewController {
         UIView.animate(withDuration: 0.3, animations: {
             self.card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
         }, completion: { finished in
+            self.updateLabels()
             self.animateCardIn()
         })
     }
     
     func animateCardIn(){
+        card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+        
         UIView.animate(withDuration: 0.3) {
             self.card.transform = CGAffineTransform.identity
         }
