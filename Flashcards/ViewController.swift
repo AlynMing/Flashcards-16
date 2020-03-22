@@ -45,14 +45,21 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didTapOnFlashcard(_ sender: Any) {
-        if (frontLabel.isHidden) {
-            frontLabel.isHidden = false
-            backLabel.isHidden = true
-        }
-        else {
-            frontLabel.isHidden = true
-            backLabel.isHidden = false
-        }
+        flipFlashcard()
+    }
+    
+    func flipFlashcard() {
+        UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight, animations: {
+            if (self.frontLabel.isHidden) {
+                self.frontLabel.isHidden = false
+                self.backLabel.isHidden = true
+            }
+            else {
+                self.frontLabel.isHidden = true
+                self.backLabel.isHidden = false
+            }
+        })
+
     }
     
     override func prepare(for segue:UIStoryboardSegue, sender: Any?) {
@@ -99,6 +106,9 @@ class ViewController: UIViewController {
         
         //Update buttons
         updateNextPrevButtons()
+        
+        //Animate
+        animateCardOut()
     }
     
     @IBAction func didTapOnPrev(_ sender: Any) {
@@ -158,6 +168,20 @@ class ViewController: UIViewController {
                 
             }
             flashcards.append(contentsOf: savedCards)
+        }
+    }
+    
+    func animateCardOut(){
+        UIView.animate(withDuration: 0.3, animations: {
+            self.card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+        }, completion: { finished in
+            self.animateCardIn()
+        })
+    }
+    
+    func animateCardIn(){
+        UIView.animate(withDuration: 0.3) {
+            self.card.transform = CGAffineTransform.identity
         }
     }
 }
